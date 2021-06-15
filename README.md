@@ -10,7 +10,7 @@
 1. 配置反向代理服务器 (nginx 或者 caddy)
 1. 通过外网访问 WordPress 服务器，然后完成安装
 
-注意:
+提示:
 
     本仓库搭建的 WordPress 默认端口可以通过 `docker-compose.yaml` 修改
 
