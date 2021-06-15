@@ -1,6 +1,8 @@
 # WordPressDeploy
 
-在您的 VPS 上部署 WordPress
+在您的 VPS 上部署 中文简体版本的WordPress
+
+当前部署的版本为: 5.7.2
 
 # WordPress 部署
 
