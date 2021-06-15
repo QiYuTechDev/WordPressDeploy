@@ -3,8 +3,11 @@
 set -e
 
 if [[ ! -d "wordpress" ]]; then
-    # 下载 WordPress 源代码
-    wget https://wordpress.org/wordpress-5.7.2.zip
+
+    # 如果不存在则 下载 WordPress 源代码
+    if [[ ! -f "wordpress.zip" ]]; then
+        wget https://wordpress.org/wordpress-5.7.2.zip
+    fi
 
     # 解压
     unzip wordpress-5.7.2.zip
