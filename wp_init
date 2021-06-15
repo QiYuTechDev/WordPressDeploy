@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -e
+
+if [[ ! -d "wordpress" ]]; then
+    # 下载 WordPress 源代码
+    wget https://wordpress.org/wordpress-5.7.2.zip
+
+    # 解压
+    unzip wordpress-5.7.2.zip
+fi
+
+# 创建 MySQL 数据文件目录
+if [[ ! -d "mysql" ]]; then
+    mkdir -p mysql
+fi
