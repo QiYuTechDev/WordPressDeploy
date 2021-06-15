@@ -1,0 +1,27 @@
+version: "3.3"
+
+services:
+  wordpress:
+    image: wordpress:5.7.2-php8.0-apache
+    container_name: wordpress_web
+    restart: always
+    env_file:
+      - env/wordpress.env
+      - env/wp_secrets.env
+    volumes:
+      - type: bind
+        source: ./wordpress
+        target: /var/www/html
+    ports:
+      - "8081:80" # 修改为任何您想使用的端口号
+
+  mysql:
+    image: mysql:8.0
+    container_name: wordpress_mysql
+    restart: always
+    env_file:
+      - env/mysql.env
+    volumes:
+      - type: bind
+        source: ./mysql
+        target: /var/lib/mysql
