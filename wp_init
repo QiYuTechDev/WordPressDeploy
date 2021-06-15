@@ -5,15 +5,13 @@ set -e
 if [[ ! -d "wordpress" ]]; then
 
     # 如果不存在则 下载 WordPress 源代码
-    if [[ ! -f "wordpress.zip" ]]; then
-        wget https://wordpress.org/wordpress-5.7.2.zip
+    # https://cn.wordpress.org/download/releases/
+    if [[ ! -f "wordpress-5.7.2-zh_CN.zip" ]]; then
+        wget https://cn.wordpress.org/wordpress-5.7.2-zh_CN.zip
     fi
 
     # 解压
-    unzip wordpress-5.7.2.zip
-
-    # apache is running as nobody
-    chmod -R 777 wordpress
+    unzip wordpress-5.7.2-zh_CN.zip
 fi
 
 # 创建 MySQL 数据文件目录
