@@ -8,6 +8,9 @@ if [[ ! -d "wordpress" ]]; then
 
     # 解压
     unzip wordpress-5.7.2.zip
+
+    # apache is running as nobody
+    chmod -R 777 wordpress
 fi
 
 # 创建 MySQL 数据文件目录
