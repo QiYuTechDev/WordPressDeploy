@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   wordpress:
-    image: wordpress:5.7.2-php8.0-apache
+    image: wordpress:5.8.0-php8.0-apache
     container_name: wordpress_web
     restart: always
     env_file:

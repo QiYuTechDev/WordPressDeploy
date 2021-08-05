@@ -2,16 +2,18 @@
 
 set -e
 
+export WP_ZIP="wordpress-5.8-zh_CN.zip"
+
 if [[ ! -d "wordpress" ]]; then
 
     # 如果不存在则 下载 WordPress 源代码
     # https://cn.wordpress.org/download/releases/
-    if [[ ! -f "wordpress-5.7.2-zh_CN.zip" ]]; then
-        wget https://cn.wordpress.org/wordpress-5.7.2-zh_CN.zip
+    if [[ ! -f "${WP_ZIP}" ]]; then
+        wget https://cn.wordpress.org/${WP_ZIP}
     fi
 
     # 解压
-    unzip wordpress-5.7.2-zh_CN.zip
+    unzip ${WP_ZIP}
 fi
 
 # 创建 MySQL 数据文件目录
