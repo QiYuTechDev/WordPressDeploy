@@ -2,7 +2,7 @@
 
 set -e
 
-export WP_ZIP="wordpress-5.8-zh_CN.zip"
+export WP_ZIP="wordpress-5.8.1-zh_CN.zip"
 
 if [[ ! -d "wordpress" ]]; then
 
