@@ -11,8 +11,8 @@
 1. 使用 `docker-compose up -d` 启动 WordPress 服务器
 1. 更新文件夹的权限
     ```shell
-    docker exec -it wordpress_web sh -c 'cd /var/www && chown -R www-data html'
-    docker exec -it wordpress_web sh -c 'cd /var/www && chmod -R 755      html'
+    docker exec -it wp_web sh -c 'cd /var/www && chown -R www-data html'
+    docker exec -it wp_web sh -c 'cd /var/www && chmod -R 755      html'
     ```
 1. 配置反向代理服务器 (nginx 或者 caddy)
 1. 通过外网访问 WordPress 服务器，然后完成安装
